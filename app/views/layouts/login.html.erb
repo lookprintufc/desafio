@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Desafio</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'login', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'login', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<% flash.each do |key, value| %>
+       <script type="text/javascript">
+          toastr.warning('<span><%= value %></span>', "Aviso");
+        </script>
+    <% end %> 
+    <%= yield %>
+  </body>
+</html>

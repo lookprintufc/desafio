@@ -1,0 +1,45 @@
+
+
+<div class="main-content container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="panel panel-default panel-table">
+              <div class="panel-heading"><span class="box-title">Listagem de usuários</span>
+                <div class="pull-right">
+                 
+                  <div class="tools pull-right" style="margin-top: -8px"><%= link_to new_user_path do %><button class="btn btn-rounded btn-primary">Novo usuário</button><% end %></div>
+               </div>
+              </div>
+              <div class="panel-body">
+              
+                  <table id="table_inter" class="table table-striped table-bordered dt-responsive nowrap display"  cellspacing="0" width="100%">
+                  <thead>
+                    <tr>
+                      <th>Nome</th>
+                      <th>E-mail</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% @users.each do |user| %>
+                    <tr class="odd gradeX">
+                      <td><%=user.name%></td>
+                      <td><%=user.email%></td>
+                      
+                      <td class="actions"><%= link_to edit_user_path(user), class: 'icon' do %><i class="s7-settings"></i> Editar<% end %></td>
+
+                      <td class="actions"><%= link_to user, method: :delete, data: { confirm: 'Deseja realmente apagar o usuário?' }, class: 'icon' do %><i class="s7-trash"></i>Apagar<% end %> 
+
+                      </td>
+
+            
+                    </tr>
+                    <% end %>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

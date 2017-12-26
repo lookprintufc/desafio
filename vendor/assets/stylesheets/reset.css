@@ -1,0 +1,322 @@
+@charset "UTF-8";
+address,
+dl,
+ol,
+p,
+ul {
+    margin-bottom: 1rem
+}
+a,
+a:not([href]):not([tabindex]):focus {
+    outline: 0
+}
+body,
+caption {
+    text-align: left
+}
+dd,
+label,
+legend {
+    margin-bottom: .5rem
+}
+address,
+legend {
+    line-height: inherit
+}
+progress,
+sub,
+sup {
+    vertical-align: baseline
+}
+button,
+hr,
+input {
+    overflow: visible
+}
+pre,
+textarea {
+    overflow: auto
+}
+@media print {
+    blockquote,
+    img,
+    pre,
+    tr {
+        page-break-inside: avoid
+    }
+    *,
+    ::after,
+    ::before {
+        text-shadow: none!important;
+        box-shadow: none!important
+    }
+    a,
+    a:visited {
+        text-decoration: underline
+    }
+    abbr[title]::after {
+        content: " (" attr(title) ")"
+    }
+    pre {
+        white-space: pre-wrap!important
+    }
+    blockquote,
+    pre {
+        border: 1px solid #999
+    }
+    thead {
+        display: table-header-group
+    }
+    h2,
+    h3,
+    p {
+        orphans: 3;
+        widows: 3
+    }
+    h2,
+    h3 {
+        page-break-after: avoid
+    }
+    .navbar {
+        display: none
+    }
+    .badge {
+        border: 1px solid #000
+    }
+    .table {
+        border-collapse: collapse!important
+    }
+    .table td,
+    .table th {
+        background-color: #fff!important
+    }
+    .table-bordered td,
+    .table-bordered th {
+        border: 1px solid #ddd!important
+    }
+}
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+legend,
+main,
+nav,
+section {
+    display: block
+}
+label,
+output {
+    display: inline-block
+}
+*,
+::after,
+::before {
+    box-sizing: border-box
+}
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent
+}
+@-ms-viewport {
+    width: device-width
+}
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.538;
+    color: #545454;
+    background-color: #f4f4f4
+}
+[tabindex="-1"]:focus {
+    outline: 0!important
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: .7692rem
+}
+dl,
+ol,
+p,
+ul {
+    margin-top: 0
+}
+abbr[data-original-title],
+abbr[title] {
+    text-decoration: underline;
+    text-decoration: underline dotted;
+    cursor: help;
+    border-bottom: 0
+}
+address {
+    font-style: normal
+}
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+    margin-bottom: 0
+}
+dt {
+    font-weight: 700
+}
+dd {
+    margin-left: 0
+}
+blockquote,
+figure {
+    margin: 0 0 1rem
+}
+dfn {
+    font-style: italic
+}
+b,
+strong {
+    font-weight: bolder
+}
+small {
+    font-size: 80%
+}
+sub,
+sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0
+}
+sub {
+    bottom: -.25em
+}
+sup {
+    top: -.5em
+}
+a {
+    color: #57c2f4;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects
+}
+a:hover {
+    color: #10a8ef
+}
+a:not([href]):not([tabindex]),
+a:not([href]):not([tabindex]):focus,
+a:not([href]):not([tabindex]):hover {
+    color: inherit;
+    text-decoration: none
+}
+code,
+kbd,
+pre,
+samp {
+    font-size: 1em
+}
+img {
+    vertical-align: middle;
+    border-style: none
+}
+svg:not(:root) {
+    overflow: hidden
+}
+[role=button],
+a,
+area,
+button,
+input:not([type=range]),
+label,
+select,
+summary,
+textarea {
+    touch-action: manipulation
+}
+table {
+    border-collapse: collapse
+}
+caption {
+    padding-top: .9rem;
+    padding-bottom: .9rem;
+    color: #878787;
+    caption-side: bottom
+}
+th {
+    text-align: inherit
+}
+button {
+    border-radius: 0
+}
+button:focus {
+    outline: dotted 1px;
+    outline: -webkit-focus-ring-color auto 5px
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit
+}
+button,
+select {
+    text-transform: none
+}
+[type=submit],
+[type=reset],
+button,
+html [type=button] {
+    -webkit-appearance: button
+}
+[type=submit]::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+button::-moz-focus-inner {
+    padding: 0;
+    border-style: none
+}
+input[type=radio],
+input[type=checkbox] {
+    box-sizing: border-box;
+    padding: 0
+}
+input[type=date],
+input[type=time],
+input[type=datetime-local],
+input[type=month] {
+    -webkit-appearance: listbox
+}
+textarea {
+    resize: vertical
+}
+fieldset {
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0
+}
+legend {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    font-size: 1.5rem;
+    color: inherit;
+    white-space: normal
+}
+
+button {
+    border-radius: 0 !important;
+}

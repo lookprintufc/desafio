@@ -1,0 +1,37 @@
+<div class="panel-body">
+   <%= form_with(model: user, local: true) do |f| %>
+     <% if user.errors.any? %>
+      <script>
+         $(document).ready(function() {
+          noty({text: ' <%= pluralize(user.errors.count, "erro", "erros") %> encontrados: </br><ul><% user.errors.each do |attr,message| %><li><%=attr%> <%= message %></li><% end %></ul>', layout: 'bottom', type: 'warning', timeout: 4000});
+         });
+      </script>
+    <% end %>
+
+      <div class="form-group row">
+         <label class="col-sm-3 col-form-label text-right">Nome</label>
+         <div class="col-sm-6">
+            <%= f.text_field :name, class: 'form-control' %>
+         </div>
+      </div>
+
+      <div class="form-group row">
+         <label class="col-sm-3 col-form-label text-right">E-mail</label>
+         <div class="col-sm-6">
+            <%= f.text_field :email, class: 'form-control' %>
+         </div>
+      </div>
+      <div class="form-group row">
+         <label class="col-sm-3 col-form-label text-right">Senha</label>
+         <div class="col-sm-6">
+           <%=  f.password_field :password, class: 'form-control' %>
+         </div>
+      </div>
+      <div class="form-group row">
+         <div class="col-sm-6">
+            <button type="submit" class="btn btn-space btn-primary ">Salvar</button>
+            <%= link_to users_path do %><button type="button" class="btn btn-space btn-secondary">Voltar</button><% end %>
+         </div>
+      </div>
+   <% end %>
+</div>

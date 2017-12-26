@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Admin - dashboard</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="Patrick Magalhaes">
+      <%= csrf_meta_tags %>
+      <%= stylesheet_link_tag    'dashboard', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'dashboard'  %>
+   </head>
+   <body>
+      <% flash.each do |key, value| %>
+      <script type="text/javascript">
+         toastr.warning('<span><%= value %></span>', "Aviso");
+      </script>
+      <% end %> 
+      <nav class="navbar navbar-expand navbar-dark mai-top-header">
+         <div class="container">
+            <a href="#" class="navbar-brand"><img src="/images/logo1.png" alt="logo" width="190"></a>
+          <!--   <div class="accout">Agência <b>1887</b> Operação <b>023</b> Conta <b>00030540-0</b></div> -->
+            <div class="logout pull-right"><%= link_to(destroy_user_session_path, :method => :delete, class: 'nav-link')  do %><i class="fa fa-sign-out" aria-hidden="true"></i> SAIR</a><% end %></div>
+         </div>
+      </nav>
+      <%= render "layouts/shared/top_menu" %>
+      <section class="welcome">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-4">
+                  <div class="welcome-name">Olá, <%=@user.name %></div>
+               </div>
+               <div class="col-sm-4">
+                  <form action="#" method="get" class="middle-form">
+                     <div class="input-group">
+                        <input type="text" name="q" class="form-control typeahead_3" placeholder="O que você quer fazer?">
+                        <span class="input-group-btn">
+                        <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="s7-search"></i>
+                        </button>
+                        </span>
+                     </div>
+                  </form>
+               </div>
+               <div class="col-sm-4">
+                  <div class="last_access">Seu último acesso foi em <%=@user.last_sign_in_at%></div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--conteudo -->
+      <%=yield%>
+      <!--conteudo fim -->
+
+      <footer>
+         <div class="container">
+            <span class="border-footer">© InterBank 2017. Desenvolvido por Intersol</span>
+         </div>
+      </footer>
+      <%= javascript_include_tag 'dashboard_footer'  %>
+   </body>
+</html>

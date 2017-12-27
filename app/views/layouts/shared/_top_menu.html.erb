@@ -11,16 +11,16 @@
                         <%= link_to authenticated_user_root_path, class: 'nav-link' do %><span class="icon s7-home"></span><span>Home</span><% end %>
                      </li>
                      <li class="nav-item parent <%=menu_open("/users")%>">
-                        <%= link_to users_path, class: 'nav-link' do %><span class="icon s7-rocket"></span><span>Usuários</span><% end %>
+                        <%= link_to users_path, class: 'nav-link' do %><span class="icon s7-users"></span><span>Usuários</span><% end %>
                      </li>
                      <li class="nav-item parent <%=menu_open("/agency_banks")%>">
-                        <%= link_to agency_banks_path, class: 'nav-link' do %><span class="icon s7-diamond"></span><span>Agências Bancárias</span><% end %>
+                        <%= link_to agency_banks_path, class: 'nav-link' do %><span class="icon s7-home"></span><span>Agências Bancárias</span><% end %>
                      </li>
                      <li class="nav-item parent <%=menu_open("/account_banks")%>">
-                        <%= link_to account_banks_path, class: 'nav-link' do %><span class="icon s7-diamond"></span><span>Contas Bancárias</span><% end %>
+                        <%= link_to account_banks_path, class: 'nav-link' do %><span class="icon s7-id"></span><span>Contas Bancárias</span><% end %>
                      </li>
                      <li class="nav-item parent <%=menu_open("/transaction")%>">
-                        <%= link_to transaction_path, class: 'nav-link' do %><span class="icon s7-diamond"></span><span>Movimentações</span><% end %>
+                        <%= link_to transaction_path, class: 'nav-link' do %><span class="icon s7-repeat"></span><span>Movimentações</span><% end %>
                      </li>
                   </ul>
                </div>

@@ -23,10 +23,9 @@
                   <tbody>
                     <% @agency_banks.each do |agency_bank| %>
                     <tr class="odd gradeX">
-
                       <td><%= agency_bank.number_agency %></td>
                       <td><%= agency_bank.address %></td>
-                      <td class="actions"><%= link_to agency_bank_path(agency_bank), class: 'icon' do %><i class="s7-look"></i> Ver Contas<% end %></td>
+                      <td class="actions"><%= link_to account_banks_path(:agency_id => agency_bank.id), class: 'icon' do %><i class="s7-look"></i> Ver Contas<% end %></td>
 
                       <td class="actions"><%= link_to edit_agency_bank_path(agency_bank), class: 'icon' do %><i class="s7-settings"></i> Editar<% end %></td>
 

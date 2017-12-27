@@ -26,7 +26,7 @@ module TransactionHelper
         Transaction.human_enum_name(:transaction_types, transaction.transaction_type)
       end
     else
-      transaction.transaction_type
+      Transaction.human_enum_name(:transaction_types, transaction.transaction_type)
     end
   end
 end

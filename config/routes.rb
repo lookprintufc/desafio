@@ -29,6 +29,8 @@ Rails.application.routes.draw do
       #Money transfer
       get '/money_transfer' => 'transaction#money_transfer'
       post '/money_transfer' => 'transaction#send_money_transfer'
+      #
+      post 'account/suggestion' => 'transaction#suggestion'
 
 
       patch 'cash_back/:transaction_id' => 'transaction#cash_back', as: :cash_back

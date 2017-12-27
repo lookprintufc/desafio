@@ -9,7 +9,7 @@
       <%= stylesheet_link_tag    'dashboard', media: 'all', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'dashboard'  %>
    </head>
-   <body>
+   <body onKeyPress="press(event.keyCode)">
       <% flash.each do |key, value| %>
       <script type="text/javascript">
          toastr.warning('<span><%= value %></span>', "Aviso");

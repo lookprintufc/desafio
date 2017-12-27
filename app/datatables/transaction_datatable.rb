@@ -12,7 +12,6 @@ class TransactionDatatable < AjaxDatatablesRails::Base
     }
   end
 
-
   def data
     records.map do |record|
       {
@@ -21,7 +20,6 @@ class TransactionDatatable < AjaxDatatablesRails::Base
         price: number_to_currency(record.price),
         user: record.user.name,
         cash_back: cash_back_button(record),
-
       }
     end
   end

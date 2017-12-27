@@ -11,14 +11,16 @@
                 <div class="form-group row">
                    <label class="col-sm-3 col-form-label text-right">Número da Conta (De)</label>
                    <div class="col-sm-6">
-                      <%= f.number_field :number_account, class: 'form-control' %>
+                      <%= f.number_field :number_account, class: 'form-control', id: "account" %>
+                      <small id="receber_infos"></small>
                    </div>
                 </div>
 
                 <div class="form-group row">
                    <label class="col-sm-3 col-form-label text-right">Número da Conta (Para)</label>
                    <div class="col-sm-6">
-                      <%= f.number_field :number_account_destination, class: 'form-control' %>
+                      <%= f.number_field :number_account_destination, class: 'form-control', id: "account_d" %>
+                      <small id="receber_infos_d"></small>
                    </div>
                 </div>
 

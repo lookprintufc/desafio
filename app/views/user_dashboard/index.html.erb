@@ -5,9 +5,8 @@
                   <div class="profile-nav alt" >
                      <section class="panel">
                         <div class="user-heading alt clock-row terques-bg">
-                           <h1>December 14</h1>
-                           <p class="text-left">2014, Friday</p>
-                           <p class="text-left">7:53 PM</p>
+                           <h1><%= l Time.now, format: :week_format %></h1>
+                           <p class="text-left"><%= l Time.now, format: :hour %></p>
                         </div>
                         <ul id="clock">
                            <li id="sec"></li>
@@ -36,37 +35,37 @@
                      </div>
                      <div class="indicator-item">
                         <div class="indicator-item-icon">
-                           Cadastrar Agência
+                           Gerenciar Agências
                         </div>
-                        <div class="indicator-item-value"><span class="indicator-value-counter">CTRL + X</span>
-                        </div>
-                     </div>
-                     <div class="indicator-item">
-                        <div class="indicator-item-icon">
-                           Gerenciar Usuários
-                        </div>
-                        <div class="indicator-item-value"><span class="indicator-value-counter">CTRL + X</span>
+                        <div class="indicator-item-value"><span class="indicator-value-counter">Control+Shift+A</span>
                         </div>
                      </div>
                      <div class="indicator-item">
                         <div class="indicator-item-icon">
-                           Gerenciar Usuários
+                           Gerenciar Contas
                         </div>
-                        <div class="indicator-item-value"><span class="indicator-value-counter">CTRL + X</span>
-                        </div>
-                     </div>
-                     <div class="indicator-item">
-                        <div class="indicator-item-icon">
-                           Gerenciar Usuários
-                        </div>
-                        <div class="indicator-item-value"><span class="indicator-value-counter">CTRL + X</span>
+                        <div class="indicator-item-value"><span class="indicator-value-counter">Control+Shift+L</span>
                         </div>
                      </div>
                      <div class="indicator-item">
                         <div class="indicator-item-icon">
-                           Gerencias Agência
+                           Realizar Transfêrencia
                         </div>
-                        <div class="indicator-item-value"><span class="indicator-value-counter">CTRL + X</span>
+                        <div class="indicator-item-value"><span class="indicator-value-counter">Control+Shift+S</span>
+                        </div>
+                     </div>
+                     <div class="indicator-item">
+                        <div class="indicator-item-icon">
+                           Realizar Saque
+                        </div>
+                        <div class="indicator-item-value"><span class="indicator-value-counter">Control+Shift+F</span>
+                        </div>
+                     </div>
+                     <div class="indicator-item">
+                        <div class="indicator-item-icon">
+                           Realizar Deposito
+                        </div>
+                        <div class="indicator-item-value"><span class="indicator-value-counter">Control+Shift+X</span>
                         </div>
                      </div>
                   </div>

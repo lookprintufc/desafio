@@ -10,12 +10,11 @@ class AccountBank < ApplicationRecord
 
   def saldo
     self.transactions.where(transaction_type: :transfer_in).sum(:price) +
-  	self.transactions.where(transaction_type: :cash_back_in).sum(:price) +
-  	self.transactions.where(transaction_type: :deposit).sum(:price) - 
-  	self.transactions.where(transaction_type: :withdrawal).sum(:price) -
-  	self.transactions.where(transaction_type: :cash_back_out).sum(:price) -
-  	self.transactions.where(transaction_type: :transfer_out).sum(:price) 
+      self.transactions.where(transaction_type: :cash_back_in).sum(:price) +
+      self.transactions.where(transaction_type: :deposit).sum(:price) -
+      self.transactions.where(transaction_type: :withdrawal).sum(:price) -
+      self.transactions.where(transaction_type: :cash_back_out).sum(:price) -
+      self.transactions.where(transaction_type: :transfer_out).sum(:price)
   end
 
 end
-

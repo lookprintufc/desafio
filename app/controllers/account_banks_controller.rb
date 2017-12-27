@@ -10,7 +10,10 @@ class AccountBanksController < BaseController
   # GET /account_banks/1
   # GET /account_banks/1.json
   def show
-    @transactions = @account_bank.transactions
+     respond_to do |format|
+      format.html
+      format.json { render json: TransactionDatatable.new(view_context, {query: @account_bank.transactions}) }
+    end
   end
 
   # GET /account_banks/new

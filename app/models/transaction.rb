@@ -1,6 +1,9 @@
 class Transaction < ApplicationRecord
   belongs_to :user
-  belongs_to :account_bank
+  belongs_to :account_bank, -> { with_deleted }
+  belongs_to :destination_account_bank, -> { with_deleted }, class_name: "AccountBank", optional: true
+
+
   #DEPOSITO, SAQUE, ESTORNO, E TRANSFERENCIA ENTRE CONTAS
   #cash_back_in = dinheiro entrou na conta
   #cash_back_out = dinheiro saiu da conta
@@ -16,7 +19,8 @@ class Transaction < ApplicationRecord
 
   #retiradas
   def types_check_min
-    ["withdrawal", "transfer_out", "cash_back_out"]
+    # ["withdrawal", "transfer_out", "cash_back_out"]
+    ["withdrawal", "transfer_out"]
   end
 
   private
@@ -46,5 +50,5 @@ class Transaction < ApplicationRecord
     errors.add("Saldo","insuficiente") unless has_limit_min?
   end
 
-  
+
 end

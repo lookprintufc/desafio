@@ -1,0 +1,11 @@
+pt-BR:
+  activerecord:
+    attributes:
+      transaction:
+          transaction_types: 
+            deposit:       Depósito
+            withdrawal:    Saque
+            cash_back_in:  Estorno recebido
+            cash_back_out: Estorno enviado 
+            transfer_in:   Transferência recebida 
+            transfer_out:  Transferência enviada

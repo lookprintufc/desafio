@@ -33,6 +33,9 @@ hr,
 input {
     overflow: visible
 }
+button{
+    border: none;
+}
 pre,
 textarea {
     overflow: auto

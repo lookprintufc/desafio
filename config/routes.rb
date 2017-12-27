@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     path: "/",
     path_names: { sign_in: 'login',
                   sign_out: 'logout'
-          },
+                  },
     :skip => 'registration'
 
   devise_scope :user do
@@ -19,8 +19,19 @@ Rails.application.routes.draw do
       resources :agency_banks
 
       get '/transaction' => 'transaction#index'
+
+      #DEPOSITO
       get '/deposit' => 'transaction#deposit'
       post '/deposit' => 'transaction#send_deposit'
+      #SAQUE
+      get '/withdrawal' => 'transaction#withdrawal'
+      post '/withdrawal' => 'transaction#send_withdrawal'
+      #Money transfer
+      get '/money_transfer' => 'transaction#money_transfer'
+      post '/money_transfer' => 'transaction#send_money_transfer'
+
+
+      patch 'cash_back/:transaction_id' => 'transaction#cash_back', as: :cash_back
 
     end
     unauthenticated :users do

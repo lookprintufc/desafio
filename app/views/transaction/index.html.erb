@@ -6,11 +6,14 @@
               <div class="panel-body">
                
                 <div class="mt-1 mb-1 text-center">
+                  <%=link_to money_transfer_path do %>
                   <button class="btn btn-space btn-primary btn-big"><i class="icon s7-home"></i> transferências  </button>
+                  <% end %>
                   <%=link_to deposit_path do %>
                   <button class="btn btn-space btn-info btn-big"><i class="icon s7-diamond"></i> Deposito </button><% end %>
+                  <%=link_to withdrawal_path do %>
                   <button class="btn btn-space btn-warning btn-big"><i class="icon s7-mail"></i> Saque </button>
-
+                  <% end %>
                 </div>
               </div>
             </div>

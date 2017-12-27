@@ -1,5 +1,5 @@
 
-  <div class="main-content container">
+      <div class="main-content container">
         <div class="row">
           <div class="col-sm-12">
             <div class="panel panel-default panel-table">
@@ -10,31 +10,21 @@
                </div>
               </div>
               <div class="panel-body">
-              
-                  <table id="table_inter" class="table table-striped table-bordered dt-responsive nowrap display"  cellspacing="0" width="100%">
+          
+                  <table id="transaction-table", data-source="<%= account_bank_path(format: :json) %>" class="table table-striped table-bordered dt-responsive nowrap display"  cellspacing="0" width="100%">
+
+
                   <thead>
                     <tr>
                       <th>Data</th>
                       <th>Tipo</th>
                       <th>Valor</th>
                       <th>Usuário</th>
-                      <th></th>
+                      <th class="noExport"></th>
                     </tr>
                   </thead>
                   <tbody>
-                    <% @transactions.each do |transaction| %>
-                    <tr class="odd gradeX">
-                      <td><%= transaction.created_at %></td>
-                      <td><%= transaction.transaction_type %></td>
-                      
-                      <td><%= transaction.price %></td>
-                      <td><%= transaction.user.email %></td>
-
-                      <td class="actions"><%#= link_to transaction, method: :delete, data: { confirm: 'Deseja realmente apagar a conta?' }, class: 'icon' do %><i class="s7-trash"></i>Estornar<%# end %> 
-
-                      </td>
-                    </tr>
-                    <% end %>
+                    
                   </tbody>
                 </table>
               </div>
@@ -42,3 +32,4 @@
           </div>
         </div>
       </div>
+

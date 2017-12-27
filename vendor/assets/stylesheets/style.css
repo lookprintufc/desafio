@@ -244,17 +244,6 @@
         background-color: #3a3a3a;
         color: #bebebe
     }
-    .mai-sub-header .navbar-nav>.nav-item.parent>.nav-link:after {
-        position: absolute;
-        content: "îšˆ";
-        font-family: "Stroke 7";
-        font-size: 1.9rem;
-        vertical-align: middle;
-        right: 15px
-    }
-    .mai-sub-header .navbar-nav>.nav-item.parent.open>.nav-link:after {
-        content: "îš‚"
-    }
 }
 .mai-sub-header .navbar-nav>.nav-item>.nav-link.dropdown-toggle:after {
     display: none
@@ -762,6 +751,7 @@
     text-align: center;
     margin-top: 20px;
     color: #fff;
+    margin-right: 20px;
 }
 
 

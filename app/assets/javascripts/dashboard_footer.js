@@ -20,6 +20,7 @@
 //= require plugins/datatable/vfs_fonts.js
 //= require plugins/select2/select2.full.min.js
 //= require data-confirm-modal
+//= require transaction.coffee
 
 
 $(function(){

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171226194341) do
+ActiveRecord::Schema.define(version: 20171227012718) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,7 +21,9 @@ ActiveRecord::Schema.define(version: 20171226194341) do
     t.float "limit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
     t.index ["agency_bank_id"], name: "index_account_banks_on_agency_bank_id"
+    t.index ["deleted_at"], name: "index_account_banks_on_deleted_at"
   end
 
   create_table "agency_banks", force: :cascade do |t|
@@ -29,6 +31,8 @@ ActiveRecord::Schema.define(version: 20171226194341) do
     t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_agency_banks_on_deleted_at"
   end
 
   create_table "transactions", force: :cascade do |t|
@@ -39,6 +43,7 @@ ActiveRecord::Schema.define(version: 20171226194341) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "destination_account_bank_id"
+    t.boolean "cash_out", default: false
     t.index ["account_bank_id"], name: "index_transactions_on_account_bank_id"
   end
 

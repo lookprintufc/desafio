@@ -97,4 +97,5 @@ Rails.application.configure do
     :email_prefix => "[Interbank] ",
     :sender_address => %{"notifier" <pixelzip0@gmail.com>},
     :exception_recipients => %w{patrickcmagal@gmail.com}
+  }
 end

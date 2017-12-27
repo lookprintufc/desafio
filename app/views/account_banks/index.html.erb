@@ -28,8 +28,8 @@
 
                       <td><%= account_bank.agency_bank.number_agency %></td>
                       <td><%= account_bank.number_account %></td>
-                      <td><%= account_bank.limit %></td>
-                      <td><%= account_bank.saldo %></td>
+                      <td><%= number_to_currency(account_bank.limit) %></td>
+                      <td><%= number_to_currency(account_bank.saldo) %></td>
 
                       <td class="actions"><%= link_to account_bank_path(account_bank), class: 'icon' do %><i class="s7-look"></i> Ver Movimentações<% end %></td>
 

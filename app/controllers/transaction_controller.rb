@@ -104,7 +104,7 @@ class TransactionController < BaseController
 
     @account = AccountBank.find_by_number_account(params[:number_account])
     unless  @account.nil?
-      render html: ("Ag: #{@account.agency_bank.number_agency}, Saldo: #{view_context.number_to_currency(@account.saldo)}").html_safe
+      render html: ("Ag: #{@account.agency_bank.number_agency}, Saldo: #{view_context.number_to_currency(@account.saldo)}, Limite: #{view_context.number_to_currency(@account.limit)}").html_safe
     else
       render html: ("Conta não encontrada.").html_safe
     end

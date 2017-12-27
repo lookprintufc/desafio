@@ -1,16 +1,3 @@
-press = (key) ->
-  if key == 1
-    window.location.href = '/agency_banks'
-  else if key == 12
-    window.location.href = '/account_banks'
-  else if key == 19
-    window.location.href = '/money_transfer'
-  else if key == 6
-    window.location.href = '/withdrawal'
-  else if key == 24
-    window.location.href = '/deposit'
-  return
-
 $ ->
   $('.select2').select2()
   $('.typeahead_3').typeahead source: [
@@ -96,3 +83,4 @@ $ ->
       return
     return
   return
+  

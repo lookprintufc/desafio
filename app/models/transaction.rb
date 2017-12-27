@@ -11,6 +11,11 @@ class Transaction < ApplicationRecord
 
   validate :check_limit_max_account
   validate :check_limit_min_account
+  validate :account_transaction_uniqueness
+
+  def account_transaction_uniqueness
+    errors.add(:destination_account_bank_id, 'não pode ser igual a conta de origem (De)') if account_bank_id == destination_account_bank_id
+  end
 
   #O limite MÁXIMO só será checado no deposito, estorno e transf entre contas
   def types_check_max

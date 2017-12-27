@@ -1,4 +1,7 @@
 /*
  *= require_self
+ *= require bootstrap.css
  *= require toast/toastr.css
+
+ *= require style.css
  */

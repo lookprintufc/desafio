@@ -1,26 +1,32 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+<div class="login-box">
+   <!-- /.login-logo -->
+   <div class="login-box-body">
+      <div class="row">
+         <div class="col-md-12">
+            <div align="center"><%= image_tag("/images/logo2.png", :alt => "Interbank",:class => "profile-image-login") %></div>
+            <p class="center text-center"></p>
+         </div>
+      </div>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name),  html: {:class => 'login-form', :id => 'form_login'} ) do |f| %>
+      <div class="form-group has-feedback">
+         <%= f.email_field :email, id: 'email', class: 'form-control', placeholder: 'example@mail.com', autofocus: true %>
+         <i class="fa fa-user  form-control-feedback"></i>
+      </div>
+      <div class="form-group has-feedback">
+         <%= f.password_field :password, id:'password', class: 'form-control', autocomplete: "off", placeholder: 'Senha' %>
+         <i class="fa fa-lock  form-control-feedback"></i>
+      </div>
+      <div class="row">
+         <!-- /.col -->
+         <div class="col-xs-12"  style="margin-bottom: 5px">
+            <button type="submit" style="" class="btn btn-primary btn-block btn-flat">ENTRAR</button>
+         </div>
+         <!-- /.col -->
+      </div>
+      <% end %>
+     
+   </div>
+   <!-- /.login-box-body -->
+     <span class="message__title" style="font-size: 13px">Desenvolvido com ♥ pela <a href="http://www.intersolnet.com.br/" target="_blank">Intersol</a></span>
+</div>
+<!-- /.login-box -->

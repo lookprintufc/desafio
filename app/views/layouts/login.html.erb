@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Desafio</title>
+    <title>Login - Interbank</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'login', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'login', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+   <body class="image-bg" style="background-color: #4DB8EA ;">
   	<% flash.each do |key, value| %>
        <script type="text/javascript">
           toastr.warning('<span><%= value %></span>', "Aviso");
